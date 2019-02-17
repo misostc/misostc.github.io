@@ -1,0 +1,134 @@
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(../fonts/SpaceGrotesk-Medium.woff2) format("woff2"), url(../fonts/SpaceGrotesk-Medium.woff) format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(../fonts/SpaceGrotesk-Bold.woff2) format("woff2"), url(../fonts/SpaceGrotesk-Bold.woff) format("woff");
+  font-weight: bold;
+}
+body {
+  font: 16px/1.3 SpaceGrotesk, sans-serif;
+  margin: 2em;
+  color: #333;
+}
+
+header,
+main {
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+header img {
+  max-width: 70vw;
+  max-height: 70vw;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin: 1.5em 0 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: normal;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: #6c6c6c;
+  margin: 3em 0 1em;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: normal;
+  color: #6c6c6c;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 #000;
+}
+a:hover {
+  box-shadow: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (min-width: 50em) {
+  header,
+section,
+ul li {
+    display: grid;
+    grid-template-columns: 235px auto;
+    grid-column-gap: 3em;
+  }
+
+  header {
+    text-align: left;
+    grid-template-rows: 6fr 4fr;
+    margin-bottom: -2em;
+  }
+  header img {
+    grid-column: 1/1;
+    grid-row: span 2;
+  }
+  header h1 {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    align-self: end;
+    font-size: 3em;
+    margin: 0;
+  }
+  header h2 {
+    grid-column: 2/2;
+    grid-row: 2/2;
+    font-size: 2em;
+    margin: 0;
+  }
+
+  section {
+    margin-bottom: 2em;
+  }
+  section h3,
+section p {
+    margin: 1em 0 0;
+    grid-column: 2/2;
+  }
+  section h4 {
+    margin: 1em 0 0;
+    grid-column: 1/1;
+    justify-self: end;
+  }
+  section ul {
+    grid-column: span 2;
+  }
+  section ul li {
+    margin-bottom: 1em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
